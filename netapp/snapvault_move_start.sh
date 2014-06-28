@@ -39,8 +39,8 @@ target_vol=$source_vol"_SM"
 vol_size=`rsh $filer df -x $source_vol | awk '{print $2}' | tail -n 1`;
 inode_count=`rsh $filer maxfiles $source_vol | cut -d" " -f9`;
 
-echo "SOURCE: $source_vol   TARGET: $target_vol
-echo "SIZE: $vol_size    INODES: $inode_count
+echo "SOURCE: $source_vol   TARGET: $target_vol"
+echo "SIZE: $vol_size    INODES: $inode_count"
 
 echo "Hit ENTER if OK ...";
 read
